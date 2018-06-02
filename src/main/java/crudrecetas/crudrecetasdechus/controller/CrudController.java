@@ -4,27 +4,27 @@ import crudrecetas.crudrecetasdechus.entity.Recipe;
 import crudrecetas.crudrecetasdechus.service.RecipeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 
 import javax.annotation.PostConstruct;
+
 import java.util.List;
 
+//@CrossOrigin(origins = "http://localhost:63342", maxAge = 3600)
 @RestController
 @RequestMapping("/crud")
-public class CrudController {
+public class CrudController{
 
     @PostConstruct
     private void loadData(){
         Recipe recipe  = new Recipe("Croquetas","leche,huevos","Cocer la leche","tipicas");
-        Recipe recipe2  = new Recipe("Jamon","leche,huevos","Cocer la leche","tipicas");
+        Recipe recipe2  = new Recipe("Jamon al horno","leche,huevos","Cocer la leche","tipicas");
+        Recipe recipe3  = new Recipe("Feijao","alubias,huevos","Cocer la leche","tipicas");
         recipeService.saveRecipe(recipe);
         recipeService.saveRecipe(recipe2);
+        recipeService.saveRecipe(recipe3);
     }
-
 
     @Autowired
     @Qualifier("recipeServiceImp")
@@ -35,9 +35,9 @@ public class CrudController {
         return recipeService.findAll();
     }
 
-    @GetMapping("/recipes/{id}")
-    public Recipe getRecipeById(@PathVariable long id){
-        return recipeService.findById(id);
+    @GetMapping("/recipes/{name}")
+    public Recipe getRecipeById(@PathVariable String name){
+        return recipeService.findByName(name);
     }
 
     @PostMapping("/addRecipe")
@@ -47,8 +47,8 @@ public class CrudController {
     }
 
     //no funciona
-    @DeleteMapping("/deleteRecipe/{id}")
-    public void deleteRecipe(@PathVariable long id){
-        recipeService.deleteById(id);
+    @DeleteMapping("/deleteRecipe/{name}")
+    public void deleteRecipe(@PathVariable String name){
+        recipeService.deleteByName(name);
     }
 }
