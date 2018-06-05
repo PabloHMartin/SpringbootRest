@@ -17,15 +17,26 @@ public class Recipe {
     private String preparation;
     @Column(name = "categories")
     private String categories;
+    @Column(name = "image")
+    private String image;
 
     public Recipe() {
     }
 
-    public Recipe(String name, String ingredients, String preparation, String categories) {
+    public Recipe(String name, String ingredients, String preparation, String categories, String image) {
         this.name = name;
         this.ingredients = ingredients;
         this.preparation = preparation;
         this.categories = categories;
+        this.image = image;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public long getId() {

@@ -28,6 +28,11 @@ public class RecipeServiceImp implements RecipeService{
         return recipeJpaRepository.findByName(name);
     }
 
+    @Override
+    public Recipe findById(String id) {
+       return recipeJpaRepository.findById(Long.parseLong(id));
+    }
+
 
     @Override
     public void saveRecipe(Recipe recipe) {
@@ -37,6 +42,11 @@ public class RecipeServiceImp implements RecipeService{
     @Override
     public void deleteByName(String name) {
         recipeJpaRepository.deleteByName(name);
+    }
+
+    @Override
+    public void deleteById(String id) {
+        recipeJpaRepository.deleteById(Long.parseLong(id));
     }
 
 

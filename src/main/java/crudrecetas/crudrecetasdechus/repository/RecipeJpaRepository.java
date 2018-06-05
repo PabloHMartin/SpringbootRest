@@ -7,5 +7,9 @@ import java.io.Serializable;
 
 public interface RecipeJpaRepository extends JpaRepository<Recipe,Serializable>{
     Recipe findByName(String name);
+    Recipe findById(long id);
+    Recipe save(Recipe recipe);
     void deleteByName(String name);
+    void deleteById(long id);
+
 }

@@ -8,6 +8,8 @@ public interface RecipeService {
 
     List<Recipe> findAll();
     Recipe findByName(String name);
+    Recipe findById(String id);
     void saveRecipe(Recipe recipe);
     void deleteByName(String name);
+    void deleteById(String id);
 }
