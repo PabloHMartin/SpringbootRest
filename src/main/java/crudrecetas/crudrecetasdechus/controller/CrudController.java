@@ -18,9 +18,9 @@ public class CrudController{
 
     @PostConstruct
     private void loadData(){
-        Recipe recipe  = new Recipe("Croquetas","leche,huevos","Cocer la leche","tipicas","croquetas.jpg");
-        Recipe recipe2  = new Recipe("Jamon al horno","leche,huevos","Cocer la leche","tipicas","");
-        Recipe recipe3  = new Recipe("Feijao","alubias,huevos","Cocer la leche","tipicas","");
+        Recipe recipe  = new Recipe("Croquetas","leche,huevos,","Cocer la leche","tipicas","croquetas.jpg");
+        Recipe recipe2  = new Recipe("Jamon al horno","leche,huevos,","Cocer la leche","tipicas","");
+        Recipe recipe3  = new Recipe("Feijao","alubias,huevos,","Cocer la leche","tipicas","");
         recipeService.saveRecipe(recipe);
         recipeService.saveRecipe(recipe2);
         recipeService.saveRecipe(recipe3);
