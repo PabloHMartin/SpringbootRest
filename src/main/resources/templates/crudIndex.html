@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/selectscript.js"></script>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="header pt-4 col-sm-12 col-md-12 col-lg-12 col-xl-12"><img src="img/web/logop.png" class="mx-auto d-block" alt="logo">
+			</div>
+		</div>
+		<div class="row">
+			<div class="recipeselector mx-auto pt-4 col-12 col-md-12 col-lg-12 col-xl-12" id="recipeselector">
+				<select  class='form-control mx-auto col-md-8 col-lg-8 col-xl-8 form-control-lg' id='recipeSelect'>
+
+				</select>
+			</div>								
+		</div>
+		<div class="row">
+			<div class="mx-auto pt-4 col-md-8 col-lg-8 col-xl-8">
+				<button type="submit" class="btn btn-primary mb-2 mr-2" id="newRecipe">Nueva</button>
+				<button type="submit" class="btn btn-primary mb-2 mr-2" id="editRecipe">Editar</button>
+			</div>
+		</div>
+		<div class="row">	
+			<div class="recipedataform pt-4 col-12 col-md-8 col-lg-8 col-xl-8 mx-auto" id="recipedataform">
+				<form>
+					<div class="form-group">
+						<label for="recipe_name">Nombre de la receta</label>
+    					<input type="text" class="form-control" id="recipe_name">
+					</div>	
+					<div class="form-group">
+						<label>Ingredientes</label>
+						<div id="ingredientes">
+    				<!--	<input type="text" class="form-control" name="ingredient0" id="0"> -->
+						</div>
+    					<div class="pt-4">
+    						<input type="button" class="btn btn-info" name="onemore" id="onemore" value="+">
+    					</div>
+
+					</div>	
+					<div class="form-group">
+						<label for="preparation">Elaboración</label>
+    					<textarea class="form-control" name="elaboration" id="preparation" rows="3"></textarea>
+					</div>
+					<div class="form-group">
+						<div>
+						<label>Categorías</label>
+						</div>
+						<div class="form-check form-check" id="categoriesCheck">
+						<div class="form-check form-check-inline col-12 col-md-12 col-lg-12 col-xl-12 mx-auto">
+  						<input class="form-check-input" type="checkbox" id="legumbres" value="legumbres">
+  						<label class="form-check-label" for="legumbres">Legumbres</label>
+  						<input class="form-check-input ml-1" type="checkbox" id="carnes" value="carnes">
+  						<label class="form-check-label" for="carnes">Carnes</label>
+						<input class="form-check-input ml-1" type="checkbox" id="aperitivosyentremeses" value="aperitivosyentremeses">
+						<label class="form-check-label" for="aperitivosyentremeses">Aperitivos y entremeses</label>
+						<input class="form-check-input ml-1" type="checkbox" id="arroces" value="arroces">
+						<label class="form-check-label" for="arroces">Arroces</label>
+						</div>
+						<div class="form-check form-check-inline col-12 col-md-12 col-lg-12 col-xl-12 mx-auto">
+						<input class="form-check-input ml-1" type="checkbox" id="ensaladas" value="ensaladas">
+						<label class="form-check-label" for="ensaladas">Ensaladas</label>
+						<input class="form-check-input ml-1" type="checkbox" id="bolleríayconfiteria" value="bolleríayconfiteria">
+						<label class="form-check-label" for="bolleríayconfiteria">Bollería y confiteria</label>
+						<input class="form-check-input ml-1" type="checkbox" id="pastas" value="pastas">
+						<label class="form-check-label" for="pastas">Pastas</label>
+						<input class="form-check-input ml-1" type="checkbox" id="pescadosymariscos" value="pescadosymariscos">
+						<label class="form-check-label" for="pescadosymariscos">Pescados y mariscos</label>
+						</div>
+						<div class="form-check form-check-inline col-12 col-md-12 col-lg-12 col-xl-12 mx-auto">
+						<input class="form-check-input ml-1" type="checkbox" id="postres" value="postres">
+						<label class="form-check-label" for="postres">Postres</label>
+						<input class="form-check-input ml-1" type="checkbox" id="sopas" value="sopas">
+						<label class="form-check-label" for="sopas">Sopas</label>
+						<input class="form-check-input ml-1" type="checkbox" id="tortillas" value="tortillas">
+						<label class="form-check-label" for="tortillas">Tortillas</label>
+						<input class="form-check-input ml-1" type="checkbox" id="tipicas" value="tipicas">
+						<label class="form-check-label" for="tipicas">Típicas</label>
+						<input class="form-check-input ml-1" type="checkbox" id="navidad" value="navidad">
+						<label class="form-check-label" for="navidad">Navidad</label>
+						</div>
+						<div class="form-check form-check-inline col-12 col-md-12 col-lg-12 col-xl-12 mx-auto">
+						<input class="form-check-input ml-1" type="checkbox" id="semanaSanta" value="semanaSanta">
+						<label class="form-check-label" for="semanaSanta">Semana Santa</label>
+						<input class="form-check-input ml-1" type="checkbox" id="patatas" value="patatas">
+						<label class="form-check-label" for="patatas">Patatas</label>
+						</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<img src="" id="image" alt="">
+					</div>
+					<div class="form-group">
+						<button type="" id="submit" class="btn btn-primary mb-2">Guardar</button>
+						<button type="" id="delete" class="btn ml-2 btn-danger mb-2">Borrar</button>
+					</div>					
+				</form>
+			</div>
+
+		</div>
+		<div class="row">
+			<div class="footer"></div>
+		</div>
+	</div>
+</body>
+</html>
