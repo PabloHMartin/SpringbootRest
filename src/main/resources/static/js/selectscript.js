@@ -4,7 +4,7 @@ $(document).ready(function () {
 
     function createSelect() {
         $.ajax({
-             url : 'http://localhost:8080/crud/recipes/',
+            url : 'http://localhost:8080/crud/recipes/',
             type : 'GET',
             dataType : 'JSON',
             success : function (data) {
@@ -82,6 +82,7 @@ $(document).ready(function () {
 
 
 
+
     $('#newRecipe').click(function () {
         $('#recipedataform').css('display', 'block');
         recipeDomReset();
@@ -128,7 +129,6 @@ $(document).ready(function () {
     $('#onemore').click(function () {
         oneMore();
     })
-
 
     $("#submit").click(function(event) {
 

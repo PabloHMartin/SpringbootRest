@@ -5,10 +5,9 @@ import crudrecetas.crudrecetasdechus.service.RecipeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
-
-
 import javax.annotation.PostConstruct;
 import javax.transaction.Transactional;
+
 
 import java.util.List;
 
@@ -29,6 +28,7 @@ public class CrudController{
     @Autowired
     @Qualifier("recipeServiceImp")
     private RecipeService recipeService;
+
 
     @GetMapping("/recipes")
     public List<Recipe> getAllRecipes(){
