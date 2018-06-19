@@ -19,29 +19,24 @@ public class RecipeServiceImp implements RecipeService{
 
 
     @Override
-    public List<Recipe> findAll() {
-        return recipeJpaRepository.findAll();
-    }
-
-    @Override
     public Recipe findByName(String name) {
         return recipeJpaRepository.findByName(name);
     }
 
     @Override
-    public Recipe findById(String id) {
-       return recipeJpaRepository.findById(Long.parseLong(id));
+    public List<Recipe> findAll() {
+        return recipeJpaRepository.findAll();
     }
 
 
     @Override
-    public void saveRecipe(Recipe recipe) {
-        recipeJpaRepository.save(recipe);
+    public Recipe findById(long id) {
+       return recipeJpaRepository.findById(id);
     }
 
+
     @Override
-    public void deleteByName(String name) {
-        recipeJpaRepository.deleteByName(name);
+    public void saveRecipe(Recipe recipe) {recipeJpaRepository.save(recipe);
     }
 
     @Override

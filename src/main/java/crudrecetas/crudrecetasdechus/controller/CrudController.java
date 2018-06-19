@@ -36,7 +36,7 @@ public class CrudController{
     }
 
     @GetMapping("/recipes/{id}")
-    public Recipe getRecipeById(@PathVariable String id){
+    public Recipe getRecipeById(@PathVariable long id){
         return recipeService.findById(id);
     }
 

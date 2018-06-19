@@ -5,10 +5,9 @@ import crudrecetas.crudrecetasdechus.entity.Recipe;
 import java.util.List;
 
 public interface RecipeService {
-
+    Recipe findByName(String name);
     List<Recipe> findAll();
-    Recipe findById(String id);
+    Recipe findById(long id);
     void saveRecipe(Recipe recipe);
-    void deleteByName(String name);
     void deleteById(String id);
 }

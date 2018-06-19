@@ -27,12 +27,12 @@ $(document).ready(function () {
         var url = "/crud/recipes/" + id;
         //do the ajax call
         recipeDomReset();
-        //faltan las categorrías
         $.ajax({
             url : url,
             type : 'GET',
             dataType : 'JSON',
             success : function (data) {
+                var id = data.id;
                 var recipe_name = data.name;
                 var ingredient = data.ingredients;
                 var categories = data.categories;
@@ -41,6 +41,7 @@ $(document).ready(function () {
                 oneMoreIngredient(getArrayIngredients(ingredient).length);
                 ingredientDataToDom(getArrayIngredients(ingredient));
                 categoriesDataToDom(getArrayCategories(categories));
+                $('#id').prop('value', id);
                 $('#recipe_name').prop('value',recipe_name);
                 $('#preparation').prop('value',preparation);
                 $('#image').attr('src','img/imgdb/'+image);
@@ -93,6 +94,7 @@ $(document).ready(function () {
     })
 
     function recipeDomReset(){
+        $('#id').prop('value',"");
         $('#recipe_name').val("");
         $('#ingredientes input').remove();
         $('#preparation').val("");
@@ -144,6 +146,7 @@ $(document).ready(function () {
         })
 
         var data = {}
+        data["id"]=$('#id').prop('value');
         data["name"] = $("#recipe_name").prop('value');
         data["ingredients"] = ingredients;
         data["preparation"] = $("#preparation").prop('value');
@@ -169,7 +172,7 @@ $(document).ready(function () {
 
     $('#delete').click(function () {
 
-        var id =  $('#recipeSelect').children(":selected").attr("id");
+        var id =  $('#recipeSelect').children(":selected").prop("id");
         $.ajax({
             type : "POST",
             url : "/crud/deleteRecipe/"+id,
