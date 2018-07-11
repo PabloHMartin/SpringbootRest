@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 public class IndexController {
 
-    private final String INDEX_WEB_VIEW = "index";
+    private final String INDEX_WEB_VIEW = "crudindex";
 
     @GetMapping("/")
     public String index(){
