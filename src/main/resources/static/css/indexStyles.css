@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+  }
+  
+  body{
+      margin: 0;
+      background-color: #f6f4e8;
+  }
+  navbar{
+    background-color: #f6f4e8;
+  }
+
+  .navbar-toggler{
+    border-color: black;
+  } 
+  
+  .menudecorated{
+    background-color: white;
+    border-top: solid 2px #753500;
+  }
+  .nav-link{
+      font-size: 1.3em;
+  }
+a{
+      text-decoration: none;
+      color: #753500;
+      font-family: 'Pacifico', cursive;
+}
+.receta{
+    background-color: white;
+    height: auto;
+    box-shadow: 1px 1px 2px #b2b2b2;
+    margin-bottom: 80px;
+    margin-top: 80px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 85%; /* or 950px */
+    min-width: 85%;
+  }
