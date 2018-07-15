@@ -74,3 +74,26 @@ body {
     max-width: 85%; /* or 950px */
     min-width: 85%;
   }
+
+.recipeList{
+  width: 300px;
+  width: 300px;
+  margin-left: 7%;
+  box-shadow:  1px 1px 2px #888888;
+}
+
+.recipeList:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+.categoryTitle{
+    font-family: 'Pacifico', cursive;
+    color: #753500;
+    text-align: center;
+    font-size: 2em;
+    border-top: solid 2px #753500;
+    background-color: white;
+    height: 90px;
+    padding: 15px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+}

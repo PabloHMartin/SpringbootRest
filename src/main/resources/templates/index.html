@@ -7,13 +7,13 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="../static/css/indexStyles.css" />
-  
+    <link rel="stylesheet" href="css/indexStyles.css" />
+    <script type="text/javascript" src="js/indexScript.js"></script>
 </head>
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="header pt-4 col-sm-12 col-md-12 col-lg-12 col-xl-12"><a href="index.html"><img src="../static/img/web/logop.png" class="mx-auto d-block" alt="logo"></a></div>
+            <div class="header pt-4 col-sm-12 col-md-12 col-lg-12 col-xl-12"><a href="http://localhost:8080/"><img src="img/web/logop.png" class="mx-auto d-block" alt="logo"></a></div>
         </div>
         <div class="row justify-content-md-center">
           <nav class="navbar navbar-expand-lg navbar-light" role="navigation">
@@ -21,34 +21,22 @@
                 <span class="navbar-toggler-icon"></span>
               </button>
 
-              <div class="collapse navbar-collapse pt-4" id="navbarSupportedContent">
-                <ul class="navbar-nav menudecorated pl-4 pr-4">
+              <div class="collapse navbar-collapse pt-4 " id="navbarSupportedContent">
+                <ul class="navbar-nav menudecorated pl-4 pr-4 menuList">
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Legumbres</a>
+                    <a class="nav-link" href="#" id="decuchara">De cuchara</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Carnes</a>
+                    <a class="nav-link" href="#" id="carnes">Carnes</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Postres</a>
+                    <a class="nav-link" href="#" id="pescados">Pescados</a>
                   </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#">Postres</a>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#" id="postres">Postres</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Postres</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Postres</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Postres</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Postres</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Postres</a>
+                      <a class="nav-link" href="#" id="pinchos">Pinchos</a>
                     </li>
                 </ul>
               </div>
@@ -56,19 +44,8 @@
         </div>
     </div>
     <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="receta col-sm-12 col-md-8 col-lg-8 col-xl-8">
-                <section>
-                    <header class="header"><p>Croquetas estilo Chus</p>
-                    </header>
-                    <img src="../static/img/imagedb/croquetas.jpg" ></img>
-                <main>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Q<br/>ui saepe pariatur ea quam ducimus harum rerum molestias, numquam cum, quasi aliquam doloremque quas distinctio officia accusantium sit at officiis reprehenderit.lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br/>
-                    Aliquam ea dicta ducimus, totam natus praesentium a nostrum vel maxime iusto tenetur et 
-                    quam itaque, doloribus consectetur voluptas numquam magnam quis! Lorem<br/> ipsum dolor sit amet, consect
-                    etur adipisicing elit. Veniam sed, assumenda velit aspernatur, cumque veritatis quia voluptate quisquam quod. Fa<br/>cilis porro, modi adipisci reprehenderit id optio aut ex doloribus repellendus!   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est a us impedit assumenda eveniet doloremque reprehenderit ex </main>
-                    <footer></footer>
-            </section>
-            </div>
+        <div class="row justify-content-center" id="displayDataDiv">
+
         </div>
     </div>
 </body>
